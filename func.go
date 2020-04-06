@@ -88,9 +88,6 @@ func ociAuthHandler(ctx context.Context, in io.Reader, out io.Writer) {
 
 	var msgToken MessageToken
 	json.NewDecoder(in).Decode(&msgToken)
-	fmt.Fprintf(out,"content of the token=>%s\n", string(msgToken.Token))
-	fmt.Fprintf(out,"content of the token=>%v\n", msgToken.Token)
-
 
 	if (len(msgToken.Token) == 0) || (msgToken.Type != "TOKEN") {
 	    fmt.Fprintf(out,"the JSON TOKEN argument is empty\n")
@@ -141,11 +138,10 @@ func ociAuthHandler(ctx context.Context, in io.Reader, out io.Writer) {
 			return
 		}
 
-		fmt.Fprintf(out,"Token content tested at %s %s\n", token, time_now)
+		
 		Rep_Gat.ExpiresAt = time.Now().Add(time.Hour * -1).Format(time.RFC3339)
 		data, err := json.Marshal(Rep_Gat)
 		jsonReplyIDCS := string(data)
-		fmt.Fprintf(out,"\n----\n%s\n--------\n",jsonReplyIDCS)
 		fdk.SetHeader(out, "TOKEN-Content", msgToken.Token)
 		fdk.WriteStatus(out, 200)
 		out.Write(data)
