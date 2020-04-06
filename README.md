@@ -5,7 +5,7 @@ This function is used to validate IDCS tokens to an IDCS application
 REF https://docs.oracle.com/en/cloud/paas/identity-cloud/rest-api/op-oauth2-v1-introspect-post.html
 
 
-** Follow the content of the debug_bucket **
+ 
 
  
 
@@ -14,7 +14,7 @@ REF https://docs.oracle.com/en/cloud/paas/identity-cloud/rest-api/op-oauth2-v1-i
 
 ### Configure OCI Settings
 
-Configure Dynamic Groups, Dynamic Group Policues,  Instant Principal 
+Configure Dynamic Groups, Dynamic Group Policies,  Instant Principal 
 
 ## Create secrets to  protect sensitive information
 
