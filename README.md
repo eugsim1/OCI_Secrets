@@ -1,6 +1,7 @@
 # Function which demonstrates the "secrects" utilisation
 
-This function is used to validate IDCS tokens to a IDCS application
+This function is used to validate IDCS tokens to an IDCS application
+
 REF https://docs.oracle.com/en/cloud/paas/identity-cloud/rest-api/op-oauth2-v1-introspect-post.html
 
 
