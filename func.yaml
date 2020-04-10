@@ -1,0 +1,5 @@
+schema_version: 20180708
+name: auth2-blog
+version: 0.0.0
+runtime: go
+entrypoint: ./func

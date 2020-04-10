@@ -1,0 +1,7 @@
+##.gitignore
+*.txt
+token
+*.sh
+env*
+*.pem
+
